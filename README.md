@@ -10,13 +10,33 @@ There's also a custom node, `test/scripts/testnode.py`, visible in one of the wo
 
 ## What's documented
 
-Photos from the actual build and run, not staged, taken straight off the VM screen during setup:
+Photos from the actual build and run, not staged, taken straight off the VM screen during setup. Hosted on my site since GitHub's folder upload wasn't cooperating, embedded here directly.
 
-**`photos/01-ros-installation/`**: installing ROS Noetic, running `rosdep update` to resolve package dependencies, and starting `roscore` successfully (ROS Master URI live, ros_comm 1.15.14).
+### ROS Noetic installation
 
-**`photos/02-catkin-workspace/`**: building the catkin workspace with `catkin_make` (Python 3.8.10, gtest/gmock built from source, shared libs on), sourcing `devel/setup.bash`, and the workspace's folder structure including the custom `testnode.py`.
+Installing ROS Noetic, running `rosdep update` to resolve package dependencies, and starting `roscore` successfully (ROS Master URI live, ros_comm 1.15.14).
 
-**`photos/03-gazebo-turtlebot3/`**: the TurtleBot3 Waffle model spawning successfully in Gazebo, with the camera plugin, laser plugin, and differential drive plugin all initializing and advertising their topics (`cmd_vel`, `odom`, `joint_states`), and the spawn process finishing cleanly.
+![rosdep update resolving package dependencies](https://lawazislam.com/assets/img/ros-gazebo/ros-installation-1.jpg)
+![ROS installation step](https://lawazislam.com/assets/img/ros-gazebo/ros-installation-2.jpg)
+![roscore starting successfully with ROS Master URI live](https://lawazislam.com/assets/img/ros-gazebo/ros-installation-3-roscore.jpg)
+![rosdep update completing, dependency cache updated](https://lawazislam.com/assets/img/ros-gazebo/ros-installation-4.jpg)
+
+### Catkin workspace
+
+Building the catkin workspace with `catkin_make` (Python 3.8.10, gtest/gmock built from source, shared libs on), sourcing `devel/setup.bash`, and the workspace's folder structure including the custom `testnode.py`.
+
+![catkin_make building the workspace successfully](https://lawazislam.com/assets/img/ros-gazebo/catkin-workspace-1-build.jpg)
+![Catkin workspace step](https://lawazislam.com/assets/img/ros-gazebo/catkin-workspace-2.jpg)
+![Catkin workspace step](https://lawazislam.com/assets/img/ros-gazebo/catkin-workspace-3.jpg)
+![Workspace folder listing showing testnode.py](https://lawazislam.com/assets/img/ros-gazebo/catkin-workspace-4.jpg)
+![Catkin workspace step](https://lawazislam.com/assets/img/ros-gazebo/catkin-workspace-5.jpg)
+
+### Gazebo + TurtleBot3
+
+The TurtleBot3 Waffle model spawning successfully in Gazebo, with the camera plugin, laser plugin, and differential drive plugin all initializing and advertising their topics (`cmd_vel`, `odom`, `joint_states`), and the spawn process finishing cleanly.
+
+![TurtleBot3 spawn log showing camera, laser, and diff-drive plugins initializing cleanly](https://lawazislam.com/assets/img/ros-gazebo/gazebo-turtlebot3-1-simulation-log.jpg)
+![Gazebo TurtleBot3 simulation step](https://lawazislam.com/assets/img/ros-gazebo/gazebo-turtlebot3-2.jpg)
 
 ## Setup reference
 
